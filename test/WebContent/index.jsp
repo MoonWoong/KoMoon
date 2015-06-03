@@ -12,7 +12,7 @@
 location.href="<%=request.getContextPath()%>/login.do";
 </script>
 
- <body>
+ <body>ddddddd
 
 <!--  <a href="/WEB-INF/view/login">로그인</a>
  <a href="/WEB-INF/view/join.jsp">회원가입</a> -->
