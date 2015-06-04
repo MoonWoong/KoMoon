@@ -11,6 +11,8 @@
 
 
 	<mvc:annotation-driven />
+	
+	<mvc:default-servlet-handler/>
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -20,5 +22,14 @@
 	</bean>
 	
 	<context:component-scan base-package="com.java.highvod" />
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath*:sql/**/*.xml" />
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.java.highvod.dao" />
+	</bean>
 
 </beans>

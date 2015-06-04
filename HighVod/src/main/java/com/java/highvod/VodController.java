@@ -1,13 +1,12 @@
 package com.java.highvod;
 
-import java.sql.SQLException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.java.highvod.dao.VodService;
+import com.java.highvod.service.VodService;
 
 @Controller
 public class VodController {
@@ -20,13 +19,20 @@ public class VodController {
 		return "index";
 	}
 	
-	@RequestMapping("dddd.do")
-	public String sub1Open() {
-		return "subPage";
+	@RequestMapping(value = "login.do", method = RequestMethod.POST)
+	public String login(String userId, String userPw, Model model) {
+		String b = "ok";
+		String name = vodService.loginCheck(userId, userPw);
+		System.out.println(name);
+		if(name == null){
+			b = "nok";
+		}
+		model.addAttribute("check", b);
+		return "loginCheck";
 	}
 	
 	@RequestMapping("test.do")	
-	public String queryTest(Model model) {
+	public String test(Model model) {
 		String name = vodService.queryTest();
 		
 		model.addAttribute("name", name);

@@ -11,5 +11,13 @@
 </head>
 <body>
 test1의 이름은 '${name}' 입니다
+<input type="button" value="돌아가기" onclick="history.back()">
+
+<form action="login.do" method="post">
+<input type="text" id="userId" name="userId"/>
+<input type="password" id="userPw" name="userPw"/>
+<input type="submit" value="로그인확인"/>
+</form>
+
 </body>
 </html>
