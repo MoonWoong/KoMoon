@@ -20,22 +20,18 @@ public class VodController {
 	}
 	
 	@RequestMapping(value = "login.do", method = RequestMethod.POST)
-	public String login(String userId, String userPw, Model model) {
+	public String login(String userName, Model model) {
 		String b = "ok";
-		String name = vodService.loginCheck(userId, userPw);
-		System.out.println(name);
-		if(name == null){
+		System.out.println(userName);
+		String userId = vodService.loginCheck(userName);
+		System.out.println(userId);
+		if(userId == null){
 			b = "nok";
 		}
 		model.addAttribute("check", b);
+		model.addAttribute("userName", userName);
+		model.addAttribute("userId", userId);
 		return "loginCheck";
 	}
 	
-	@RequestMapping("test.do")	
-	public String test(Model model) {
-		String name = vodService.queryTest();
-		
-		model.addAttribute("name", name);
-		return "queryTest";
-	}
 }

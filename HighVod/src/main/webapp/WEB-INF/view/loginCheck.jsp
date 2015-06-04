@@ -8,12 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-로그인
 <c:choose>
-<c:when test="${check =='ok'}">
-성공</c:when>
-<c:otherwise>
-실패</c:otherwise>
+	<c:when test="${check =='ok'}">
+		${userName }님 안녕하세요 아이디는 '${userId }'입니다.
+	</c:when>
+	<c:otherwise>
+		아이디가 없네요
+	</c:otherwise>
 </c:choose>
 </body>
 </html>

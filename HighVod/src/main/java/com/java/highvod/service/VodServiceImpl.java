@@ -11,13 +11,9 @@ public class VodServiceImpl implements VodService {
 	@Autowired
 	private VodMapper vodMapper;
 
-	public String loginCheck(String userId, String userPw) {
-		return vodMapper.loginCheck(userId, userPw);
+	public String loginCheck(String userName) {
+		return vodMapper.loginCheck(userName);
 	}
 
-	public String queryTest() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }
