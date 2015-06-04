@@ -9,7 +9,7 @@
 <body>
 	<div align="center" class="body">
 		<h2>로그인화면</h2>
-		<form action="login.html" method="post">
+		<form action="joincheck.do" method="post">
 			<table>
 				<tr height="40px">
 					<td>ID</td>
@@ -27,7 +27,7 @@
 					<td align="center"><input type="reset" value="리셋"></td>
 				</tr>
 			</table>
-			<a href ="join.jsp">회원가입 하고싶어요.</a>
+			<a href ="join.do">회원가입 하고싶어요.</a>
 		</form>
 	</div>
 </body>

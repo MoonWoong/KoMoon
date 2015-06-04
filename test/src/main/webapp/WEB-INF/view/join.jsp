@@ -9,7 +9,7 @@
 <body>
 	<div align="center">
 		<h2>회원가입</h2>
-		<form action="joincheck.jsp" method="post">
+		<form action="regist.do" method="post">
 			<table>
 				<tr height="40px">
 					<td>ID</td>
