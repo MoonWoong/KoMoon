@@ -31,6 +31,13 @@ public class daoImpl extends JdbcDaoSupport implements dao {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	private static final String Query = "SLECT * "+"FROM member"+"WHERE ID=? AND PASSWORD=?";
+
+	public dto find(String ID, String PW) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 
 }

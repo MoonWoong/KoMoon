@@ -9,7 +9,7 @@
 <body>
 	<div align="center">
 		<h2>회원가입</h2>
-		<form action="regist.do" method="post">
+		<form action="joincheck.jsp" method="post">
 			<table>
 				<tr height="40px">
 					<td>ID</td>
@@ -26,10 +26,10 @@
 			<td height="40px" align="center">
 			<input type="submit" name ="b_submit" value="등록"></td>
 			<td height="40px" align="center">
-			<input type="reset" name ="b_reset" value="취소"></td>
+			<input type="button" name ="b_reset"value="취소" onclick="javascript:history.go(-1)">
 			</table>
 		</form>
-		<a href="history.go(1)">로그인화면으로 돌아가기</a>
+		<!-- <a href="backpage.do">로그인화면으로 돌아가기</a> -->
 	</div>
 </body>
 </html>

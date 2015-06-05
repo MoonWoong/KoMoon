@@ -8,11 +8,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Welcome</title>
 
+<title>CSS MenuMaker</title>
 </head>
 <body>
-	<img alt="" src="/image/vod.jpg">
-	<input type="button" value="화면" name="main" onclick="location='test.do'">
+<iframe></iframe>
+
 </body>
 </html>

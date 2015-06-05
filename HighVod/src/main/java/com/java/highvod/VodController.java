@@ -19,6 +19,11 @@ public class VodController {
 		return "index";
 	}
 	
+	@RequestMapping("test.do")
+	public String test() {
+		return "queryTest";
+	}
+	
 	@RequestMapping(value = "login.do", method = RequestMethod.POST)
 	public String login(String userName, Model model) {
 		String b = "ok";
@@ -32,6 +37,11 @@ public class VodController {
 		model.addAttribute("userName", userName);
 		model.addAttribute("userId", userId);
 		return "loginCheck";
+	}
+	
+	@RequestMapping("movieAction.do")
+	public String movieAction() {
+		return "movie/action";
 	}
 	
 }

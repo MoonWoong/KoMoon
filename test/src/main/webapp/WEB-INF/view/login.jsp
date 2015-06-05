@@ -9,7 +9,7 @@
 <body>
 	<div align="center" class="body">
 		<h2>로그인화면</h2>
-		<form action="joincheck.do" method="post">
+		<form action="loginsuccess.do" method="post">
 			<table>
 				<tr height="40px">
 					<td>ID</td>

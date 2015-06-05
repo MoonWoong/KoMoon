@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.DTO.*;
+
 @Controller
 public class controller {
 
@@ -15,24 +17,35 @@ public class controller {
 		return "index";
 	}
 	
+	@RequestMapping("mainmenu.do")
+	public String mainmenu(){
+		return "main";
+	}
+	
 	@RequestMapping("login.do")
 	public String login(){
 		return "login";
 	}
 	
+	
 	//protected ModelAndView onSubmit(HttpServletRequest request,HttpServletResponse response,Object command,BindException bindException)
 
-	@RequestMapping("join.do")
+	@RequestMapping("/join.do")
 	public String join(){
 
 		return "join";
 	}
-	@RequestMapping("joincheck.do")
-	protected ModelAndView handleRequestInternal(String id)throws Exception{
-		ModelAndView mav = new ModelAndView("joincheck");
-		mav.addObject("id", id);
-		
-		return mav;
-	}
+
+	@RequestMapping("/loginsuccess.do")
+	public String loginsuccess(){
+
+		return "joincheck";
+	}	
+
+/*	@RequestMapping("/join.do")
+	protected ModelAndView handleRequestInternal(HttpServletRequest arg0,HttpServletResponse arg1)throws Exception{
+
+		return new ModelAndView("/login");
+	}*/
 }
 
