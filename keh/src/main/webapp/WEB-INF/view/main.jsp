@@ -5,14 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
-<link href="<%=request.getContextPath()%>/css/main.css"
-	rel="stylesheet" type="text/css" />
-<link href="<%=request.getContextPath()%>/css/mainmenu.css" type="text/css" />
 </head>
 <body>
 <div id="top">
-<%@ include file="top.jsp" %>
+	<%@ include file="top.jsp" %>
 </div>
 <p><img border="0" src="<%=request.getContextPath()%>/img/k.jpg"></img></p>
 </body>
