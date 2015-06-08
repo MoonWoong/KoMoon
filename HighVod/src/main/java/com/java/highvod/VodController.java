@@ -39,9 +39,9 @@ public class VodController {
 		return "loginCheck";
 	}
 	
-	@RequestMapping("movieAction.do")
+	@RequestMapping("menu.do")
 	public String movieAction() {
-		return "movie/action";
+		return "menu/menu";
 	}
 	
 }

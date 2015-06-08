@@ -5,7 +5,7 @@
 <mapper namespace="com.java.highvod.dao.VodMapper">
 
     <select id="loginCheck" parameterType="string" resultType="string">
-		SELECT USER_ID FROM TEST WHERE USER_NAME = #{userName}
+		SELECT ID FROM KEHTEST WHERE NAME = #{name}
 	</select>
     
 </mapper>
