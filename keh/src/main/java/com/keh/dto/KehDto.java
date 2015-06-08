@@ -1,6 +1,6 @@
-package com.DTO;
+package com.keh.dto;
 
-public class dto {
+public class KehDto {
 
 	private String id;
 	private String pw;

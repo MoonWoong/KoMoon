@@ -9,7 +9,7 @@
 <html>
  
  <script type="text/javascript">
-location.href = "<%=request.getContextPath()%>/mainmenu.do";
+location.href = "mainmenu.do";
 </script>
 
  <body>

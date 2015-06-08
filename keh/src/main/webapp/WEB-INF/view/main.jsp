@@ -10,6 +10,7 @@
 <div id="top">
 	<%@ include file="top.jsp" %>
 </div>
-<p><img border="0" src="<%=request.getContextPath()%>/img/k.jpg"></img></p>
+<input type="button" value="db리스트테스트" onclick="location='dbTest.do'" style="width:100px;height:100px;"/>
+<p><img border="0" src="img/k.jpg"></img></p>
 </body>
 </html>

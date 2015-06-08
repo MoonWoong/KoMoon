@@ -6,14 +6,12 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-	<mvc:default-servlet-handler />
+	
 	<!-- Uncomment and your base-package here: <context:component-scan base-package="org.springframework.samples.web"/> -->
-	<context:component-scan base-package="com.controller"></context:component-scan>
-	<context:component-scan base-package="com.DAO"></context:component-scan>
-	<context:component-scan base-package="com.DTO"></context:component-scan>
-	<context:component-scan base-package="com.Service"></context:component-scan>
+	<context:component-scan base-package="com.keh"></context:component-scan>
+	
 	<mvc:annotation-driven />
-
+	<mvc:default-servlet-handler />
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- Example: a logical view name of 'showMessage' is mapped to '/WEB-INF/jsp/showMessage.jsp' -->
@@ -21,8 +19,23 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-
-
+	<bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+ 
+    </bean>
+ 
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath*:sql/**/*.xml" />
+		<property name="typeAliasesPackage" value="com.keh.dto" />
+	</bean>
+	
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.keh.dao" />
+	</bean>
+    
+    
 	<!-- <bean id="teamDao" class="com.DAO.daoImpl"> <property name="daoimpl" 
 		ref="tdao"></property> </bean> <bean id="teamService" class="com.Service.serviceImpl"> 
 		<property name="service" ref="tservice"></property> </bean> -->

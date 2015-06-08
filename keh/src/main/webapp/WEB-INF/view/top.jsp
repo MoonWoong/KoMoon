@@ -6,10 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath()%>/js/mainmenu.js"></script>
-<link href="<%=request.getContextPath()%>/css/main.css"
-	rel="stylesheet" type="text/css" />
-<link href="<%=request.getContextPath()%>/css/mainmenu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/mainmenu.js"></script>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/mainmenu.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
