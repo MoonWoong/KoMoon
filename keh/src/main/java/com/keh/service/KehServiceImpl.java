@@ -2,17 +2,19 @@ package com.keh.service;
 
 import java.util.ArrayList;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.keh.dao.KehMapper;
 import com.keh.dto.KehDto;
 
-@Service("kehService")
+@Repository
 public class KehServiceImpl implements KehService {
 
 	@Autowired
-	private KehMapper kehMapper;
+	private SqlSession sqlSession;
 	
 //	public List getTeamList() throws DataAccessException {
 //		// TODO Auto-generated method stub
@@ -39,6 +41,8 @@ public class KehServiceImpl implements KehService {
 	
 	public ArrayList<KehDto> memberList() {
 		ArrayList<KehDto> result = new ArrayList<KehDto>();
+		
+		KehMapper kehMapper = sqlSession.getMapper(KehMapper.class);
        
         result = kehMapper.memberList();
         
