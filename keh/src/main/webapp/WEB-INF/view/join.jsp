@@ -9,14 +9,14 @@
 <body>
 	<div align="center">
 		<h2>회원가입</h2>
-		<form action="joincheck.jsp" method="post">
+		<form action="register.do" method="post">
 			<table>
 				<tr height="40px">
 					<td>ID</td>
 					<td><input type="text" name="id"></td>
 				<tr height="40px">
 					<td>PASSWORD</td>
-					<td><input type="text" name="pw"></td>
+					<td><input type="password" name="pw"></td>
 				<tr height="40px">
 					<td>NAME</td>
 					<td><input type="text" name="name"></td>

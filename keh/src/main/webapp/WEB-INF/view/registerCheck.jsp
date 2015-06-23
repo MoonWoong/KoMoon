@@ -12,8 +12,7 @@
 
 
 <%-- <jsp:getProperty property="regbean" name="name"/>님 환영합니다. --%>
-${userDto.name } 님 환영합니다.
-<input type="button" value="메인으로" onclick="location='main.do'"/>
-
+회원가입을 축하합니다.
+<input type="button" value="로그인하기" onclick="location='login.do'">
 </body>
 </html>

@@ -7,12 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div id="top">
-	<%@ include file="top.jsp" %>
-</div>
-<input type="button" value="db리스트테스트" onclick="location='dbTest.do'" style="width:100px;height:100px;"/>
-<p><img border="0" src="img/k.jpg"style="width:100px;height:200px"></img></p>
-<메인> 항목</메인>
+<!-- <div id="top"> -->
+<%-- 	<%@ include file="top.jsp" %> --%>
+<!-- </div> -->
+<!-- <input type="button" value="db리스트테스트" onclick="location='dbTest.do'" style="width:100px;height:100px;"/> -->
+<!-- <p><img border="0" src="img/k.jpg"style="width:100px;height:200px"></img></p> -->
+<!-- <메인> 항목</메인> -->
 
+<a href="myPage.do">마이페이지</a>
+<a href="#">로그아웃</a>
 </body>
 </html>

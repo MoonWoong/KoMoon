@@ -17,4 +17,14 @@
    <select id="loginCheck" resultType="KehDto">
    		SELECT * FROM kehtest WHERE id=#{id} AND pw =#{pw}
    </select>
+   
+   <insert id="register" parameterType="map">
+       INSERT INTO kehtest(id,pw,name) VALUES(#{id},#{pw},#{name} )
+   </insert>
+   
+   <update id="updateInfo" parameterType="map">
+       UPDATE kehtest SET name = #{name} WHERE id = #{id}
+   </update>
+   
+   
 </mapper>

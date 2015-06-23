@@ -14,5 +14,7 @@ public interface KehService {
 	
 	ArrayList<KehDto> memberList();
 	KehDto loginCheck(String id,String pw);
+	void registerCheck(String id, String pw, String name);
+	void updateInfo(String id, String name);
 	
 }
