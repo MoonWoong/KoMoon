@@ -13,6 +13,6 @@ public interface KehService {
 	
 	
 	ArrayList<KehDto> memberList();
-	
+	KehDto loginCheck(String id,String pw);
 	
 }

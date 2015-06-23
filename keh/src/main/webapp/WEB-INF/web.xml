@@ -12,7 +12,6 @@
     <filter-name>encodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-  <display-name>keh</display-name>
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:spring/application-config.xml</param-value>

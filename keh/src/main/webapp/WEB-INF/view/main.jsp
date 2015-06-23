@@ -11,6 +11,8 @@
 	<%@ include file="top.jsp" %>
 </div>
 <input type="button" value="db리스트테스트" onclick="location='dbTest.do'" style="width:100px;height:100px;"/>
-<p><img border="0" src="img/k.jpg"></img></p>
+<p><img border="0" src="img/k.jpg"style="width:100px;height:200px"></img></p>
+<메인> 항목</메인>
+
 </body>
 </html>

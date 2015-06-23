@@ -45,9 +45,13 @@ public class KehController {
 	}
 
 	@RequestMapping("/loginsuccess.do")
-	public String loginsuccess(){
-
-		return "joincheck";
+	public ModelAndView loginsuccess(KehDto dto){
+		KehDto result = new KehDto();
+		ModelAndView model = new ModelAndView();
+		result = kehService.loginCheck(dto.getId(), dto.getPw());
+		model.addObject("dkdkdkdkdkd", result);
+		model.setViewName("joincheck");
+		return model;
 	}	
 
 /*	@RequestMapping("/join.do")

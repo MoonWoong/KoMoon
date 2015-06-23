@@ -9,7 +9,7 @@
 <html>
  
  <script type="text/javascript">
-location.href = "mainmenu.do";
+location.href = "login.do";
 </script>
 
  <body>

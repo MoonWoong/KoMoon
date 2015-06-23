@@ -19,29 +19,37 @@ public class VodController {
 		return "index";
 	}
 	
-	@RequestMapping("test.do")
-	public String test() {
-		return "queryTest";
+	@RequestMapping("main.do")
+	public String queryTest() {
+		return "main";
 	}
 	
-	@RequestMapping(value = "login.do", method = RequestMethod.POST)
-	public String login(String userName, Model model) {
-		String b = "ok";
-		System.out.println(userName);
-		String userId = vodService.loginCheck(userName);
-		System.out.println(userId);
-		if(userId == null){
-			b = "nok";
-		}
-		model.addAttribute("check", b);
-		model.addAttribute("userName", userName);
-		model.addAttribute("userId", userId);
-		return "loginCheck";
+	@RequestMapping("openMovieAction.do")
+	public String openMovieAction() {
+		return "movie/action";
+	}
+	
+	@RequestMapping("login.do")
+	public String login() {
+		return "login";
 	}
 	
 	@RequestMapping("menu.do")
-	public String movieAction() {
+	public String menu() {
 		return "menu/menu";
+	}
+	
+	@RequestMapping(value = "loginCheck.do", method = RequestMethod.POST)
+	public String loginCheck(String userName, Model model) {
+		String success = "ok";
+		String userId = vodService.loginCheck(userName);
+		if(userId == null){
+			success = "nok";
+		}
+		model.addAttribute("check", success);
+		model.addAttribute("userName", userName);
+		model.addAttribute("userId", userId);
+		return "loginCheck";
 	}
 	
 }

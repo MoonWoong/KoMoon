@@ -8,6 +8,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 </head>
 <body>
+
+<div id="top">
+	<%@ include file="top.jsp" %>
+</div>
 <table>
 	<tr>
 	    <td align="center">id</td>

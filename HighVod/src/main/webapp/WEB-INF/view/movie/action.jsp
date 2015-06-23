@@ -5,9 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<%@ include file="../menu/menu.jsp" %>
+<script type="text/javascript">
+function fn_goQuery(){
+	location.href = "queryTest.do";
+}
+</script>
 </head>
 <body>
-	액션 페이지
+	액션 페이지 
+	<input type="button" value="로그인체크페이지" onclick="fn_goQuery()">
 </body>
 </html>

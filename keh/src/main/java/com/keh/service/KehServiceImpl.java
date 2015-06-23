@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import com.keh.dao.KehMapper;
 import com.keh.dto.KehDto;
@@ -47,6 +46,14 @@ public class KehServiceImpl implements KehService {
         result = kehMapper.memberList();
         
         return result;
+	}
+
+	public KehDto loginCheck(String id, String pw) {
+		KehDto dto = new KehDto();
+		KehMapper kehMapper = sqlSession.getMapper(KehMapper.class);
+	    dto = kehMapper.loginCheck(id,pw);
+	    System.out.println(dto);
+		return dto;
 	}
 
 	
