@@ -1,4 +1,4 @@
-package com.java.highvod;
+package woong.highvod.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,7 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.java.highvod.service.VodService;
+import com.mysql.fabric.xmlrpc.base.Array;
+
+import woong.highvod.service.VodService;
 
 @Controller
 public class VodController {
@@ -14,19 +16,14 @@ public class VodController {
 	@Autowired
 	private VodService vodService;
 	
-	@RequestMapping("/")
-	public String mainOpen() {
+	@RequestMapping("home")
+	public String home() {
 		return "index";
 	}
 	
 	@RequestMapping("main.do")
-	public String queryTest() {
+	public String main() {
 		return "main";
-	}
-	
-	@RequestMapping("openMovieAction.do")
-	public String openMovieAction() {
-		return "movie/action";
 	}
 	
 	@RequestMapping("login.do")

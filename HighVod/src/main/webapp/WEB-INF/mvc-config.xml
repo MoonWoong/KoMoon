@@ -21,16 +21,17 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<context:component-scan base-package="com.java.highvod" />
+	<context:component-scan base-package="woong.highvod" />
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath*:sql/**/*.xml" />
-		<property name="typeAliasesPackage" value="com.keh.dto" />
+		<property name="typeAliasesPackage" value="woong.highvod.dto" />
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.java.highvod.dao" />
+		<property name="basePackage" value="woong.highvod.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 
 </beans>

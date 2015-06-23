@@ -1,4 +1,4 @@
-package com.java.highvod.service;
+package woong.highvod.service;
 
 public interface VodService {
 	

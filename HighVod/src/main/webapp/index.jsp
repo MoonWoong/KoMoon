@@ -8,25 +8,15 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 <title>KM VOD</title>
 
-<%@ include file="/WEB-INF/view/menu/menu.jsp" %>
-
 <script type="text/javascript">
-
+	location.href = "main.do";
 </script>
-
-<style type="text/css">
-
-</style>
 
 </head>
 <body>
-
-
-
-
 	
 </body>
 </html>

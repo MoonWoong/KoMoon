@@ -1,4 +1,4 @@
-package com.java.highvod.dao;
+package woong.highvod.dao;
 
 import org.apache.ibatis.annotations.Param;
 
