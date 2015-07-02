@@ -16,6 +16,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/common.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -32,7 +33,8 @@ $(document).ready(function(){
 
 <nav class="navbar navbar-inverse">
   <div class="container">
-	<img alt="" src="image/vod.jpg" style="width:100%;height:150px;">
+	<img alt="" src="image/main1.jpg" style="width:49%;height:150px;">
+	<img alt="" src="image/main2.jpg" style="width:49%;height:150px;">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -40,11 +42,11 @@ $(document).ready(function(){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="home">My Money</a>
+      <a class="navbar-brand" href="openMain.do">My Money</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="home">Home</a></li>
+        <li><a href="openMain.do">Home</a></li>
         <li><a href="#">M.M Service</a></li>
         <li><a href="#">Contact</a></li>
       </ul>

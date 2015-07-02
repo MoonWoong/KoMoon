@@ -13,20 +13,37 @@
 <title>VOD 테스트</title>
 </head>
 <body>
+<c:choose>
+	<c:when test="${sessionCheck == 'nok'}">
+		<div class="container">
+			<div style="float: right;">
+				<a href="login.do" style="margin-right: 5px;">로그인</a>
+				<a href="register.do" style="margin-right: 5px;">회원가입</a>
+			</div>
+		</div><!-- /.container -->
+	</c:when>
+	<c:when test="${sessionCheck == 'ok'}">
+		<div class="container">
+			<div style="float: right;">
+				<a href="#" style="margin-right: 5px;">마이페이지</a>
+				<a href="#" style="margin-right: 5px;">로그아웃</a>
+			</div>
+		</div><!-- /.container -->
+	</c:when>
+</c:choose>
 
-<div id="guestC" class="container">
-	<div style="float: right;">
-		<a href="login.do" style="margin-right: 5px;">로그인</a>
-		<a href="join.do" style="margin-right: 5px;">회원가입</a>
-	</div>
-</div><!-- /.container -->
-<div id="userC" class="container" style="display:none;">
-	<div style="float: right;">
-		<a href="#" style="margin-right: 5px;">마이페이지</a>
-		<a href="#" style="margin-right: 5px;">로그아웃</a>
-	</div>
-</div><!-- /.container -->
-<img alt="" src="image/k.jpg" style="width: 100px; height: 80px;">
+
+
+슬라이드
+
+<div class="container" style="text-align: center; margin-top: 20px;">
+	<img alt="" src="image/money.png" style="width: 400px; height: 180px;">
+	<img alt="" src="image/money1.jpg" style="width: 400px; height: 180px;">
+	<br><h1>Service</h1><br>
+	
+	<img alt="" src="image/money3.jpg" style="width: 400px; height: 180px;">
+</div>
+
 
 </body>
 </html>

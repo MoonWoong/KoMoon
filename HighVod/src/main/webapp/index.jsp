@@ -12,7 +12,7 @@
 <title>KM VOD</title>
 
 <script type="text/javascript">
-	location.href = "main.do";
+	location.href = "openMain.do";
 </script>
 
 </head>

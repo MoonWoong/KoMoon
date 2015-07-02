@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="woong.mymoney.dao.user.UserMapper">
+
+    <select id="loginCheck" parameterType="string" resultType="UserDto">
+		SELECT USER_NO AS userNo
+			 , USER_ID AS userId
+			 , USER_PW AS userPw
+			 , USER_NAME AS userName
+			 , USER_BIRTH AS userBirth
+			 , USER_SEX AS userSex
+			 , USER_EMAIL AS userEmail
+		FROM MM_USER
+		WHERE 1 = 1
+		AND USER_NAME = #{userName}
+	</select>
+	
+    <select id="userIdDupCheck" parameterType="string" resultType="string">
+		SELECT USER_ID AS userId
+		FROM MM_USER
+		WHERE 1 = 1
+		AND USER_ID = #{userId}
+	</select>
+	
+    <insert id="insertUser" parameterType="UserDto">
+        INSERT INTO MM_USER
+        	( USER_ID
+        	, USER_PW
+        	, USER_NAME
+        	, USER_BIRTH
+        	, USER_SEX
+        	, USER_EMAIL)
+        VALUES
+        	( #{userId}
+        	, #{userPw}
+        	, #{userName}
+        	, #{userBirth}
+        	, #{userSex}
+        	, #{userEmail})
+    </insert>
+    
+    <select id="selectUserInfo" parameterType="UserDto" resultType="UserDto">
+        SELECT USER_NO AS userNo
+        	 , USER_ID AS userId
+        	 , USER_PW AS userPw
+        	 , USER_NAME AS userName
+        	 , USER_BIRTH AS userBirth
+        	 , USER_SEX AS userSex
+        	 , USER_EMAIL AS userEmail
+        FROM MM_USER
+        WHERE 1 = 1
+        AND USER_ID = #{userId}
+        AND USER_PW = #{userPw}
+    </select>
+    
+</mapper>

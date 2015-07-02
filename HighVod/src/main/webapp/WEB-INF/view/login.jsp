@@ -6,15 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%@ include file="/WEB-INF/view/menu/menu.jsp" %>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 <style type="text/css">
 .form-signin {
   max-width: 330px;
   padding: 15px;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
@@ -47,24 +43,50 @@
 }
 
 </style>
+
+<script type="text/javascript">
+function fn_loginPrcs(){
+	if($("#userId").val() == ""){
+		alert("아이디를 입력해주세요.");
+		return false;
+	}
+	if($("#userPw").val() == ""){
+		alert("비밀번호를 입력해주세요.");
+		return false;
+	}
+	
+	var url = "http://localhost:8080/MyMoney/user/loginPrcs.do";
+	var data = $("#loginForm").serialize();
+	
+	commonAjax(url, data, callback = function(returnData){
+		alert(returnData.userName + "님 안녕하세요.");
+		location.href = "openMain.do";
+	});
+}
+</script>
+
 </head>
 <body>
 <div class="container">
-
-  <form class="form-signin">
+	
+  <form class="form-signin" id="loginForm">
     <h2 class="form-signin-heading">MyMoney Service</h2>
-    <input type="text" id="userId" name="userId" class="form-control" placeholder="아이디" required autofocus>
-    <input type="password" id="userPw" name="userPw" class="form-control" placeholder="비밀번호" required>
+    <input type="text" id="userId" name="userId" class="form-control" placeholder="아이디" autofocus>
+    <input type="password" id="userPw" name="userPw" class="form-control" placeholder="비밀번호">
     <div class="checkbox">
       <label>
         <input type="checkbox" value="remember-me">아이디 기억
       </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button><br>
+    <button class="btn btn-lg btn-primary btn-block" type="button" onclick="javascript:fn_loginPrcs();">Login</button><br>
     <a href="#">아이디 찾기</a> /
   	<a href="#">비밀번호 찾기</a>
-  	<a href="#" style="float: right;">회원가입</a>
+  	<a href="register.do" style="float: right;">회원가입</a>
   </form>
+  
+  <div style="text-align: center;">
+		<img alt="" src="image/money2.jpg" style="width: 400px; height: 200px;">
+	</div>
   
 
 </div> <!-- /container -->

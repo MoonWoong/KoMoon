@@ -10,7 +10,7 @@
 <body>
 <c:choose>
 	<c:when test="${check =='ok'}">
-		${userName }님 안녕하세요 아이디는 '${userId }'입니다.
+		${user.userName }님 안녕하세요 아이디는 '${user.userId }'입니다.
 	</c:when>
 	<c:otherwise>
 		아이디가 없네요
